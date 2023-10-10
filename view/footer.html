@@ -1,0 +1,12 @@
+<footer>
+    <section>
+        <p>{{ copyright }}</p>
+        <ul>
+            <li :for="item in footer">
+                <a :href="item.href" target="_blank">
+                    <i :class="item.class"></i>
+                </a>
+            </li>
+        </ul>
+    </section>
+</footer>

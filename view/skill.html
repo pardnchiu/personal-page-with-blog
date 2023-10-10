@@ -1,0 +1,40 @@
+<section id="skill">
+    <section>
+        <header>
+            <h6 class="at delay">{{ title }}</h6>
+            <p class="at delay">{{ content }}</p>
+        </header>
+        <section>
+            <div :for="item in items">
+                <div class="delay" :year="item.year">
+                    <div></div>
+                    <div></div>
+                </div>
+                <p class="at delay">{{ item.name }}</p>
+            </div>
+        </section>
+    </section>
+</section>
+
+<script>
+    const section6 = new $dom({
+        id: "skill",
+        data: {
+            title: "Skills",
+            content: "The skills I use for development.",
+            items: [
+                { name: "Swift", year: 7 },
+                { name: "Html / Css/ Js", year: 6 },
+                { name: "Node.js", year: 6 },
+                { name: "PHP", year: 3 },
+                { name: "Nginx", year: 6 },
+                { name: "Apache", year: 3 },
+                { name: "RHEL / Debian", year: 6 },
+                { name: "GCP / Firebase", year: 6 }
+            ]
+        },
+        next: function () {
+            section6.dom.querySelectorAll("*.delay").forEach(e => delay_observer.observe(e));
+        }
+    })
+</script>

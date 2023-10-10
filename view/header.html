@@ -1,0 +1,27 @@
+
+<header id="header">
+    <section>
+        <article>
+            <h1 class="at delay" :html="heading"></h1>
+            <h2 class="at delay"> {{ subHeading }}</h2>
+            <section>
+                <a class="at delay" :href="href" target="_blank">{{ button }}</a>
+            </section>
+        </article>
+    </section>
+</header>
+
+<script>
+    const header = new $dom({
+        id: "header",
+        data: {
+            heading: "Hey! I'm <strong>Pardn Chiu</strong>",
+            subHeading: "Developer with iOS and full-stack web development skills.",
+            href: "https://github.com/pardnchiu",
+            button: "More templates on GitHub"
+        },
+        next: function () {
+            header.dom.querySelectorAll("*.delay").forEach(e => delay_observer.observe(e));
+        }
+    });
+</script>

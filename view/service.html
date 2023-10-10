@@ -1,0 +1,60 @@
+<section id="service">
+    <section>
+        <header>
+            <h6 class="at delay">{{ title }}</h6>
+            <p class="at delay">{{ content }}</p>
+        </header>
+        <section>
+            <article :for="item in items">
+                <i :class="item.class"></i>
+                <h6 class="at delay">{{ item.title }}</h6>
+                <p class="at delay">{{ item.content }}</p>
+            </article>
+        </section>
+    </section>
+</section>
+
+<script>
+    const section4 = new $dom({
+        id: "service",
+        data: {
+            title: "Services",
+            content: "The services I can offer.",
+            items: [
+                {
+                    class: "fa-brands fa-apple at delay",
+                    title: "Native iOS",
+                    content: "Proficient in using Swift for pure code native development, without using Storyboard."
+                },
+                {
+                    class: "fa-solid fa-laptop-code at delay",
+                    title: "Web Front-end",
+                    content: "Skilled in utilizing HTML, CSS/Sass, and pure JavaScript to build SPAs, without using front-end frameworks."
+                },
+                {
+                    class: "fa-solid fa-server at delay",
+                    title: "Web Back-end",
+                    content: "Knowledgeable in PHP and Python, specializing in using Node.js with TypeScript."
+                },
+                {
+                    class: "fa-brands fa-chrome at delay",
+                    title: "Web Development",
+                    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla viverra elit consequat neque laoreet, sed efficitur mi euismod."
+                },
+                {
+                    class: "fa-brands fa-app-store-ios at delay",
+                    title: "App Development",
+                    content: "Duis quam neque, lacinia vel massa ac, hendrerit volutpat purus. Quisque sed lacus in magna molestie rutrum."
+                },
+                {
+                    class: "fa-solid fa-headset at delay",
+                    title: "Tech Support",
+                    content: "Suspendisse scelerisque, ligula a luctus consectetur, nunc erat convallis dui, eget dictum turpis purus et neque."
+                }
+            ]
+        },
+        next: function () {
+            section4.dom.querySelectorAll("*.delay").forEach(e => delay_observer.observe(e));
+        }
+    })
+</script>

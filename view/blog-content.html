@@ -1,0 +1,137 @@
+<section id="blog">
+    <section>
+        <section class="bl">
+            <header>
+                <img src="https://pardn.io/image/head0.jpg" alt="">
+                <strong>邱敬幃</strong>
+                <p>帕登數位科技負責人</p>
+                <section>
+                    <a href="https://github.com/pardnchiu">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/pardnchiu">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:mail@pardn.ltd">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                </section>
+            </header>
+            <h1>測試標題</h1>
+            <h2>測試副標題</h2>
+            <p>
+                <time>2022/01/05</time>・
+                <i class="fa-solid fa-eye"></i> 100
+            </p>
+        </section>
+        <section class="br">
+            <header>
+                <img src="https://pardn.io/image/head0.jpg" alt="">
+                <strong>邱敬幃</strong>
+                <p>帕登數位科技負責人</p>
+                <section>
+                    <a href="https://github.com/pardnchiu">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/pardnchiu">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:mail@pardn.ltd">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                </section>
+            </header>
+            <section class="post">
+                <strong>最新文章</strong>
+                <a href="./blog-content.html">
+                    <strong>理解非同步程式設計和事件驅動架構</strong>
+                    <p>
+                        <time>2022/01/05</time>・
+                        <i class="fa-solid fa-eye"></i> 100
+                    </p>
+                </a>
+                <a href="./blog-content.html">
+                    <strong>理解非同步程式設計和事件驅動架構</strong>
+                    <p>
+                        <time>2022/01/05</time>・
+                        <i class="fa-solid fa-eye"></i> 100
+                    </p>
+                </a>
+                <a href="./blog-content.html">
+                    <strong>理解非同步程式設計和事件驅動架構</strong>
+                    <p>
+                        <time>2022/01/05</time>・
+                        <i class="fa-solid fa-eye"></i> 100
+                    </p>
+                </a>
+                <a href="./blog-content.html">
+                    <strong>理解非同步程式設計和事件驅動架構</strong>
+                    <p>
+                        <time>2022/01/05</time>・
+                        <i class="fa-solid fa-eye"></i> 100
+                    </p>
+                </a>
+                <a href="./blog-content.html">
+                    <strong>理解非同步程式設計和事件驅動架構</strong>
+                    <p>
+                        <time>2022/01/05</time>・
+                        <i class="fa-solid fa-eye"></i> 100
+                    </p>
+                </a>
+                <button>查看全部</button>
+            </section>
+            <section class="topic">
+                <strong>主題</strong>
+                <a href="">iOS開發 (2)</a>
+                <a href="">前端開發 (3)</a>
+                <a href="">後端開發 (2)</a>
+            </section>
+            <section class="tag">
+                <strong>標籤</strong>
+                <a href="">Html</a>
+                <a href="">Css</a>
+                <a href="">Sass</a>
+                <a href="">JavaScript</a>
+                <a href="">TypeScript</a>
+                <a href="">GitHub</a>
+            </section>
+        </section>
+    </section>
+</section>
+<script>
+    const section8 = new $dom({
+        id: "blog",
+        data: {
+        },
+        next: function () {
+            const viewer = new MDViewer({
+                pre: `# Markdown Editor
+
+> A web-based Markdown editor with real-time preview designed for editing of md files online. 
+> Through modular design, it is easy to integrate into websites for use.
+> Must be used in conjunction with [PDExtension-js](https://github.com/pardnchiu/PDExtension-js).
+
+## Feature
+- Built using Html, Css / Sass and JavaScript.
+test
+- Rendered using [PDExtension](https://github.com/pardnchiu/PDExtension-js).
+- Use [Font Awesome 6](https://fontawesome.com/v6/search) icons.
+- Preview available [Here](https://pardnchiu.github.io/markdown-editor).
+
+## Contributor
+
+- [Pardn Chiu 邱敬幃](https://linkedin.com/in/pardnchiu)
+
+## License
+
+This source code project is licensed under the GPL-3.0 license.
+
+***
+
+©️ 2023 [Pardn Chiu 邱敬幃](https://www.linkedin.com/in/pardnchiu)`, delay: 0
+            });
+            "blog".$.$child([0, 0])._child(viewer.body);
+            viewer.init();
+        }
+    })
+</script>

@@ -1,0 +1,327 @@
+<!-- 
+
+	Copyright 2023 Pardn Ltd 帕登數位科技有限公司.
+	Created by Pardn Chiu 邱敬幃.
+	Email: mail@pardn.ltd
+	
+ -->
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta name="mobile-web-app-capable" content="no">
+        <meta name="apple-mobile-web-app-capable" content="no">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="robots" content="index follow">
+        <!--  -->
+        <title>Blog | Personal Page with Blog | 邱敬幃 Pardn Chiu | GitHub.io</title>
+        <meta name="title" content="Blog | Personal Page with Blog | 邱敬幃 Pardn Chiu | GitHub.io">
+        <meta name="description" content="部落格 | 個人介紹頁 (含部落格) 實作範例 | 帕登數位科技有限公司">
+        <!-- -->
+        <meta name="author" content="邱敬幃 Pardn Chiu">
+        <link rel="author" href="https://pardn.io">
+        <link rel="canonical" href="https://pardnchiu.github.io/personal-page-with-blog/blog.html">
+        <meta name="referrer" content="unsafe-url">
+        <meta name="copyright" content="© 2023 帕登數位科技有限公司 Pardn Ltd">
+        <!-- Facebook -->
+        <meta property="og:title" content="Blog | Personal Page with Blog | 邱敬幃 Pardn Chiu | GitHub.io">
+        <meta property="og:description" content="部落格 | 個人介紹頁 (含部落格) 實作範例 | 帕登數位科技有限公司">
+        <meta property="og:image" content="https://pardn.io/image/repo/personal-page-with-blog.jpg">
+        <meta property="og:url" content="https://pardnchiu.github.io/personal-page-with-blog/blog.html">
+        <meta property="og:site_name" content="Pardn Chiu 的 Github Page">
+        <meta property="og:type" content="website">
+        <!-- Twitter -->
+        <meta property="twitter:title" content="Blog | Personal Page with Blog | 邱敬幃 Pardn Chiu | GitHub.io">
+        <meta property="twitter:description" content="部落格 | 個人介紹頁 (含部落格) 實作範例 | 帕登數位科技有限公司">
+        <meta property="twitter:image" content="https://pardnchiu.github.io//image/repo/personal-page-with-blog.jpg">
+        <meta property="twitter:url" content="https://pardnchiu.github.io/personal-page-with-blog/blog.html">
+        <!-- Google -->
+        <meta name="google-site-verification" content="YQQ2f6AchR8dcb55Az2BYd_mw4TrP0J1RApD-v2v65Y">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5VYEZPVXX"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-L5VYEZPVXX');
+        </script>
+        <!--  -->
+        <link rel="stylesheet" href="css/index.css">
+        <!--  -->
+        <script src="https://pardnchiu.github.io/PDExtension-js/PDExtension.min.js" copyright="Pardn Ltd"></script>
+        <script src="https://pardnchiu.github.io/markdown-editor/js/PDMDEditor.min.js" copyright="Pardn Ltd"></script>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+        <script src="./js/index.min.js" defer></script>
+        <!--  -->
+        <style>
+            :root {
+                --width-max: 1024px;
+
+                --col-brand-1: #F5F5F5;
+                --col-brand-2: #C7C7C7;
+                --col-brand-3: #999999;
+                --col-brand-4: #6B6B6B;
+                --col-brand-5: #f1c50e;
+                --col-brand-6: #303030;
+                --col-brand-7: #242424;
+                --col-brand-8: #171717;
+                --col-brand-9: #0A0A0A;
+
+                --gradient-col: linear-gradient(to right bottom, rgb(70, 180, 105), rgb(70, 130, 180), rgb(250, 75, 75));
+            }
+        </style>
+    </head>
+
+    <body id="body">
+
+        <nav :path="./view/nav.html"></nav>
+        <section id="blog">
+            <section>
+                <section class="bl">
+                    <header>
+                        <img src="https://pardn.io/image/head0.jpg" alt="">
+                        <strong>邱敬幃 Pardn Chiu</strong>
+                        <p>帕登數位科技負責人</p>
+                        <section>
+                            <a href="">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa-regular fa-envelope"></i>
+                            </a>
+                        </section>
+                    </header>
+                    <section class="post">
+                        <a href="./blog-content.html">
+                            <strong>理解非同步程式設計和事件驅動架構</strong>
+                            <p>
+                                <time>2022/01/05</time>・
+                                <i class="fa-solid fa-eye"></i> 100
+                            </p>
+                            <p>在軟體開發生命週期中，測試佔據了至關重要的地位，有助於確保代碼的正確性、可靠性和穩定性。
+                                單元測試和整合測試是兩種關鍵的測試層級，它們在確保軟體品質方面發揮了關鍵作用。
+                                本篇將會以 Mocha 與 Supertest 作為範例來深入討論。</p>
+                        </a>
+                        <a href="./blog-content.html">
+                            <strong>理解非同步程式設計和事件驅動架構</strong>
+                            <p>
+                                <time>2022/01/05</time>・
+                                <i class="fa-solid fa-eye"></i> 100
+                            </p>
+                            <p>RESTful API 是一種設計風格，旨在促進資源的有效管理和互動。這種設計風格以 REST (Representational State Transfer)
+                                為基礎，是一種通用的概念，適用於各種不同的應用程式和服務。
+                                本篇將深入研究 REST 是什麼，如何設計 RESTful API，以及如何使用 Express 實作 API。</p>
+                        </a>
+                        <a href="./blog-content.html">
+                            <strong>理解非同步程式設計和事件驅動架構</strong>
+                            <p>
+                                <time>2022/01/05</time>・
+                                <i class="fa-solid fa-eye"></i> 100
+                            </p>
+                            <p>RESTful API 是一種設計風格，旨在促進資源的有效管理和互動。這種設計風格以 REST (Representational State Transfer)
+                                為基礎，是一種通用的概念，適用於各種不同的應用程式和服務。
+                                本篇將深入研究 REST 是什麼，如何設計 RESTful API，以及如何使用 Express 實作 API。</p>
+                        </a>
+                        <a href="./blog-content.html">
+                            <strong>理解非同步程式設計和事件驅動架構</strong>
+                            <p>
+                                <time>2022/01/05</time>・
+                                <i class="fa-solid fa-eye"></i> 100
+                            </p>
+                            <p>RESTful API 是一種設計風格，旨在促進資源的有效管理和互動。這種設計風格以 REST (Representational State Transfer)
+                                為基礎，是一種通用的概念，適用於各種不同的應用程式和服務。
+                                本篇將深入研究 REST 是什麼，如何設計 RESTful API，以及如何使用 Express 實作 API。</p>
+                        </a>
+                        <a href="./blog-content.html">
+                            <strong>理解非同步程式設計和事件驅動架構</strong>
+                            <p>
+                                <time>2022/01/05</time>・
+                                <i class="fa-solid fa-eye"></i> 100
+                            </p>
+                            <p>RESTful API 是一種設計風格，旨在促進資源的有效管理和互動。這種設計風格以 REST (Representational State Transfer)
+                                為基礎，是一種通用的概念，適用於各種不同的應用程式和服務。
+                                本篇將深入研究 REST 是什麼，如何設計 RESTful API，以及如何使用 Express 實作 API。</p>
+                        </a>
+                        <a href="./blog-content.html">
+                            <strong>理解非同步程式設計和事件驅動架構</strong>
+                            <p>
+                                <time>2022/01/05</time>・
+                                <i class="fa-solid fa-eye"></i> 100
+                            </p>
+                            <p>RESTful API 是一種設計風格，旨在促進資源的有效管理和互動。這種設計風格以 REST (Representational State Transfer)
+                                為基礎，是一種通用的概念，適用於各種不同的應用程式和服務。
+                                本篇將深入研究 REST 是什麼，如何設計 RESTful API，以及如何使用 Express 實作 API。</p>
+                        </a>
+                        <a href="./blog-content.html">
+                            <strong>理解非同步程式設計和事件驅動架構</strong>
+                            <p>
+                                <time>2022/01/05</time>・
+                                <i class="fa-solid fa-eye"></i> 100
+                            </p>
+                            <p>RESTful API 是一種設計風格，旨在促進資源的有效管理和互動。這種設計風格以 REST (Representational State Transfer)
+                                為基礎，是一種通用的概念，適用於各種不同的應用程式和服務。
+                                本篇將深入研究 REST 是什麼，如何設計 RESTful API，以及如何使用 Express 實作 API。</p>
+                        </a>
+                        <a href="./blog-content.html">
+                            <strong>理解非同步程式設計和事件驅動架構</strong>
+                            <p>
+                                <time>2022/01/05</time>・
+                                <i class="fa-solid fa-eye"></i> 100
+                            </p>
+                            <p>RESTful API 是一種設計風格，旨在促進資源的有效管理和互動。這種設計風格以 REST (Representational State Transfer)
+                                為基礎，是一種通用的概念，適用於各種不同的應用程式和服務。
+                                本篇將深入研究 REST 是什麼，如何設計 RESTful API，以及如何使用 Express 實作 API。</p>
+                        </a>
+                        <a href="./blog-content.html">
+                            <strong>理解非同步程式設計和事件驅動架構</strong>
+                            <p>
+                                <time>2022/01/05</time>・
+                                <i class="fa-solid fa-eye"></i> 100
+                            </p>
+                            <p>RESTful API 是一種設計風格，旨在促進資源的有效管理和互動。這種設計風格以 REST (Representational State Transfer)
+                                為基礎，是一種通用的概念，適用於各種不同的應用程式和服務。
+                                本篇將深入研究 REST 是什麼，如何設計 RESTful API，以及如何使用 Express 實作 API。</p>
+                        </a>
+                        <a href="./blog-content.html">
+                            <strong>理解非同步程式設計和事件驅動架構</strong>
+                            <p>
+                                <time>2022/01/05</time>・
+                                <i class="fa-solid fa-eye"></i> 100
+                            </p>
+                            <p>RESTful API 是一種設計風格，旨在促進資源的有效管理和互動。這種設計風格以 REST (Representational State Transfer)
+                                為基礎，是一種通用的概念，適用於各種不同的應用程式和服務。
+                                本篇將深入研究 REST 是什麼，如何設計 RESTful API，以及如何使用 Express 實作 API。</p>
+                        </a>
+                    </section>
+                    <section class="page">
+                        <a href="">1</a>
+                        <a href="">2</a>
+                        <a href="">3</a>
+                        <a href="">下一頁</a>
+                    </section>
+                </section>
+                <section class="br">
+                    <header>
+                        <img src="https://pardn.io/image/head0.jpg" alt="">
+                        <strong>邱敬幃 Pardn Chiu</strong>
+                        <p>帕登數位科技負責人</p>
+                        <section>
+                            <a href="">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="">
+                                <i class="fa-regular fa-envelope"></i>
+                            </a>
+                        </section>
+                    </header>
+                    <section class="post">
+                        <strong>最新文章</strong>
+                        <a href="">
+                            <strong>理解非同步程式設計和事件驅動架構</strong>
+                            <p>
+                                <time>2022/01/05</time>・
+                                <i class="fa-solid fa-eye"></i> 100
+                            </p>
+                        </a>
+                        <a href="">
+                            <strong>理解非同步程式設計和事件驅動架構</strong>
+                            <p>
+                                <time>2022/01/05</time>・
+                                <i class="fa-solid fa-eye"></i> 100
+                            </p>
+                        </a>
+                        <a href="">
+                            <strong>理解非同步程式設計和事件驅動架構</strong>
+                            <p>
+                                <time>2022/01/05</time>・
+                                <i class="fa-solid fa-eye"></i> 100
+                            </p>
+                        </a>
+                        <a href="">
+                            <strong>理解非同步程式設計和事件驅動架構</strong>
+                            <p>
+                                <time>2022/01/05</time>・
+                                <i class="fa-solid fa-eye"></i> 100
+                            </p>
+                        </a>
+                        <a href="">
+                            <strong>理解非同步程式設計和事件驅動架構</strong>
+                            <p>
+                                <time>2022/01/05</time>・
+                                <i class="fa-solid fa-eye"></i> 100
+                            </p>
+                        </a>
+                        <button>查看全部</button>
+                    </section>
+                    <section class="topic">
+                        <strong>主題</strong>
+                        <a href="">iOS開發 (2)</a>
+                        <a href="">前端開發 (3)</a>
+                        <a href="">後端開發 (2)</a>
+                    </section>
+                    <section class="tag">
+                        <strong>標籤</strong>
+                        <a href="">Html</a>
+                        <a href="">Css</a>
+                        <a href="">Sass</a>
+                        <a href="">JavaScript</a>
+                        <a href="">TypeScript</a>
+                        <a href="">GitHub</a>
+                    </section>
+                </section>
+            </section>
+        </section>
+        <footer :path="./view/footer.html"></footer>
+        <script>
+            const body = new $dom({
+                id: "body",
+                data: {
+                    title: "Pardn Ltd",
+                    items: [
+                        { href: "./index.html", name: "HOME" },
+                        { href: "./portfolio.html", name: "PORTFOLIO" },
+                        { href: "./blog.html", name: "BLOG" },
+                    ],
+                    copyright: "© 帕登數位科技有限公司 Pardn Ltd",
+                    footer: [
+                        {
+                            href: "https://github.com/pardnchiu",
+                            class: "fa-brands fa-github"
+                        },
+                        {
+                            href: "https://linkedin.com/pardnchiu",
+                            class: "fa-brands fa-linkedin-in"
+                        },
+                        {
+                            href: "mailto:mail@pardn.ltd",
+                            class: "fa-regular fa-envelope"
+                        }
+                    ]
+                },
+                event: {
+                    tab: function () {
+                        this.$pre().$$class("show") ? this.$pre().class_("show") : this.$pre()._class("show")
+                    }
+                },
+                next: function () {
+                    const br = "blog".$.$sel("section.br");
+                    if (br) {
+                        const top = vh - br.$h;
+                        br._style({ top: `${(br.$h + 64 > vh) ? top : 0}px` })
+                    };
+                }
+            })
+        </script>
+    </body>
+
+</html>
