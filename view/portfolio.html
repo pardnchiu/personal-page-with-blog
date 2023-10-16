@@ -20,6 +20,7 @@
                     vw >= 480 ? filterExist ? [80, 80] : [0, 0] : filterExist ? [80] : [0];
             let map = {};
 
+            let dom = "temp"._()
             ary.forEach((e, i) => {
                 if (e.tag) map[e.tag.toUpperCase()] = 1;
                 if (e === ary.$(-1) && "#body-portfolio".$.$child(0) && "#body-portfolio".$.$child(0).tagName === "UL") {
@@ -42,6 +43,11 @@
                     const h = Math.min(...offsetAry);
                     const i = offsetAry.indexOf(h);
                     const ratio = vw >= 480 ? e.ratio : 16 / 10;
+                    const photo = "figure.at.delay"._([
+                        "img"._({ src: e.src }),
+                        "img"._({ src: e.src }),
+                        "figcaption"._(e.title)
+                    ]);
                     const row = "a"._({
                         style: {
                             top: `${offsetAry[i]}px`,
@@ -52,24 +58,21 @@
                         ratio: e.ratio,
                         "filter-tag": String(e.tag)
                     }, [
-                        "figure.at.delay"._([
-                            "img"._({ src: e.src }),
-                            "img"._({ src: e.src }),
-                            "figcaption"._(e.title)
-                        ])
+                        photo
                     ])._open(e.href);
 
-                    "#body-portfolio".$._child(row);
-                    delay_observer.observe(row.$child(0));
+                    dom._child(row);
+                    delay_observer.observe(photo);
 
                     offsetAry[i] += (rw / ratio) + gap;
 
-                    if (e !== ary.$(-1)) return;
+                    if (e.href !== ary.$(-1).href) return;
 
+                    "#body-portfolio".$._child(dom);
                     "#body-portfolio".$._style({
                         height: `${Math.max(...offsetAry) + 16 * 3}px`
                     });
-                }, i * 10);
+                }, 0);
             });
         }
     });
@@ -102,9 +105,10 @@
 
                 e._style({
                     top: `${offsetAry[i]}px`,
-                    left: `${16 + (rw + gap) * i}px`,
-                    width: `${isTag ? rw : 0}px`,
-                    height: `${isTag ? rw / ratio : 0}px`
+                    left: `${isTag ? 16 + (rw + gap) * i : -rw - gap}px`,
+                    width: `${rw}px`,
+                    height: `${rw / ratio}px`,
+                    opacity: isTag ? 1 : 0
                 });
                 offsetAry[i] += isTag ? (rw / ratio) + gap : 0;
 
@@ -119,7 +123,7 @@
                 });
 
                 "#body-portfolio".$.class_("updating");
-            }, i * 5);
+            }, i * 2);
         });
     };
 </script>
