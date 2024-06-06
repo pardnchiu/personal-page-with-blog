@@ -74,6 +74,18 @@
                     });
                 }, 0);
             });
+
+            let resizeTimer, resizeW = document.body.clientWidth;
+            window.onresize = function () {
+                clearTimeout(resizeTimer);
+
+                if (resizeW != document.body.clientWidth) resizeTimer = setTimeout(() => {
+                    resizeW = document.body.clientWidth;
+                    clearTimeout(resizeTimer);
+
+                    updatePortfolio();
+                }, 300);
+            };
         }
     });
 
