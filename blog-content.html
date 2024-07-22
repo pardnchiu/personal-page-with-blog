@@ -52,8 +52,9 @@
         <!--  -->
         <link rel="stylesheet" href="css/index.css">
         <!--  -->
-        <script src="https://pardnchiu.github.io/PDExtension-js/PDExtension.min.js" copyright="Pardn Ltd"></script>
-        <script src="https://pardnchiu.github.io/markdown-editor/js/PDMDEditor.min.js" copyright="Pardn Ltd"></script>
+        <script src="https://cdn.jsdelivr.net/gh/pardnchiu/PDExtension-js@latest/js/PDExtension.min.js" copyright="Pardn Ltd" defer></script>
+        <!-- <script src="https://pardnchiu.github.io/PDExtension-js/PDExtension.min.js" copyright="Pardn Ltd"></script> -->
+        <!-- <script src="https://pardnchiu.github.io/markdown-editor/js/PDMDEditor.min.js" copyright="Pardn Ltd"></script> -->
         <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
         <script src="./js/index.min.js" defer></script>
         <!--  -->
@@ -81,44 +82,78 @@
         <nav :path="./view/nav.html"></nav>
         <section :path="./view/blog-content.html"></section>
         <footer :path="./view/footer.html"></footer>
-        <script>
-            const body = new $dom({
-                id: "body",
-                data: {
-                    title: "Pardn Ltd",
-                    items: [
-                        { href: "./index.html", name: "HOME" },
-                        { href: "./portfolio.html", name: "PORTFOLIO" },
-                        { href: "./blog.html", name: "BLOG" },
-                    ],
-                    copyright: "© Pardn Ltd 帕登數位科技有限公司",
-                    footer: [
-                        {
-                            href: "https://github.com/pardnchiu/website-template-26",
-                            class: "fa-brands fa-github"
-                        },
-                        {
-                            href: "https://linkedin.com/pardnchiu",
-                            class: "fa-brands fa-linkedin-in"
-                        },
-                        {
-                            href: "mailto:mail@pardn.ltd",
-                            class: "fa-regular fa-envelope"
+        <script type="module">
+            import { MDViewer, MDEditor } from "https://cdn.jsdelivr.net/gh/pardnchiu/markdown-editor@1.0.1/v1/PDMDEditor.min.js"
+            document.addEventListener("DOMContentLoaded", _ => {
+                const body = new $dom({
+                    id: "body",
+                    data: {
+                        title: "Pardn Ltd",
+                        items: [
+                            { href: "./index.html", name: "HOME" },
+                            { href: "./portfolio.html", name: "PORTFOLIO" },
+                            { href: "./blog.html", name: "BLOG" },
+                        ],
+                        copyright: "© Pardn Ltd 帕登數位科技有限公司",
+                        footer: [
+                            {
+                                href: "https://github.com/pardnchiu/website-template-26",
+                                class: "fa-brands fa-github"
+                            },
+                            {
+                                href: "https://linkedin.com/pardnchiu",
+                                class: "fa-brands fa-linkedin-in"
+                            },
+                            {
+                                href: "mailto:mail@pardn.ltd",
+                                class: "fa-regular fa-envelope"
+                            }
+                        ]
+                    },
+                    event: {
+                        tab: function () {
+                            this.$pre().$$class("show") ? this.$pre().class_("show") : this.$pre()._class("show")
                         }
-                    ]
-                },
-                event: {
-                    tab: function () {
-                        this.$pre().$$class("show") ? this.$pre().class_("show") : this.$pre()._class("show")
+                    },
+                    next: function () {
+                        const br = "blog".$.$sel("section.br");
+                        if (br) {
+                            const top = vh - br.$h;
+                            br._style({ top: `${(br.$h + 64 > vh) ? top : 0}px` })
+                        };
+
+                        const viewer = new MDViewer({
+                            id: "",
+                            editor: new MDEditor({
+                                id: ""
+                            }),
+                pre: `> A web-based Markdown editor with real-time preview designed for editing of md files online. 
+> Through modular design, it is easy to integrate into websites for use.
+> Must be used in conjunction with [PDExtension-js](https://github.com/pardnchiu/PDExtension-js).
+
+## Feature
+- Built using Html, Css / Sass and JavaScript.
+test
+- Rendered using [PDExtension](https://github.com/pardnchiu/PDExtension-js).
+- Use [Font Awesome 6](https://fontawesome.com/v6/search) icons.
+- Preview available [Here](https://pardnchiu.github.io/markdown-editor).
+
+## Contributor
+
+- [Pardn Chiu 邱敬幃](https://linkedin.com/in/pardnchiu)
+
+## License
+
+This source code project is licensed under the GPL-3.0 license.
+
+***
+
+©️ 2023 [Pardn Chiu 邱敬幃](https://www.linkedin.com/in/pardnchiu)`, delay: 0
+            });
+            "blog".$.$child([0, 0])._child(viewer.body, "section.page".$);
+            viewer.init();
                     }
-                },
-                next: function () {
-                    const br = "blog".$.$sel("section.br");
-                    if (br) {
-                        const top = vh - br.$h;
-                        br._style({ top: `${(br.$h + 64 > vh) ? top : 0}px` })
-                    };
-                }
+                })
             })
         </script>
     </body>

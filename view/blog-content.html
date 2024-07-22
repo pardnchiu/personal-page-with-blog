@@ -116,38 +116,39 @@
         </section>
     </section>
 </section>
-<script>
-    const section8 = new $dom({
-        id: "blog",
-        data: {
-        },
-        next: function () {
-            const viewer = new MDViewer({
-                pre: `> A web-based Markdown editor with real-time preview designed for editing of md files online. 
-> Through modular design, it is easy to integrate into websites for use.
-> Must be used in conjunction with [PDExtension-js](https://github.com/pardnchiu/PDExtension-js).
+<script type="module">
+    // import { MDViewer } from "https://cdn.jsdelivr.net/gh/pardnchiu/markdown-editor@latest/v1/PDMDEditor.min.js";
+    // const section8 = new $dom({
+    //     id: "blog",
+    //     data: {
+    //     },
+    //     next: function () {
+//             const viewer = new MDViewer({
+//                 pre: `> A web-based Markdown editor with real-time preview designed for editing of md files online. 
+// > Through modular design, it is easy to integrate into websites for use.
+// > Must be used in conjunction with [PDExtension-js](https://github.com/pardnchiu/PDExtension-js).
 
-## Feature
-- Built using Html, Css / Sass and JavaScript.
-test
-- Rendered using [PDExtension](https://github.com/pardnchiu/PDExtension-js).
-- Use [Font Awesome 6](https://fontawesome.com/v6/search) icons.
-- Preview available [Here](https://pardnchiu.github.io/markdown-editor).
+// ## Feature
+// - Built using Html, Css / Sass and JavaScript.
+// test
+// - Rendered using [PDExtension](https://github.com/pardnchiu/PDExtension-js).
+// - Use [Font Awesome 6](https://fontawesome.com/v6/search) icons.
+// - Preview available [Here](https://pardnchiu.github.io/markdown-editor).
 
-## Contributor
+// ## Contributor
 
-- [Pardn Chiu 邱敬幃](https://linkedin.com/in/pardnchiu)
+// - [Pardn Chiu 邱敬幃](https://linkedin.com/in/pardnchiu)
 
-## License
+// ## License
 
-This source code project is licensed under the GPL-3.0 license.
+// This source code project is licensed under the GPL-3.0 license.
 
-***
+// ***
 
-©️ 2023 [Pardn Chiu 邱敬幃](https://www.linkedin.com/in/pardnchiu)`, delay: 0
-            });
-            "blog".$.$child([0, 0])._child(viewer.body, "section.page".$);
-            viewer.init();
-        }
-    })
+// ©️ 2023 [Pardn Chiu 邱敬幃](https://www.linkedin.com/in/pardnchiu)`, delay: 0
+//             });
+//             "blog".$.$child([0, 0])._child(viewer.body, "section.page".$);
+//             viewer.init();
+        // }
+    // })
 </script>

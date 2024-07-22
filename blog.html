@@ -52,8 +52,8 @@
         <!--  -->
         <link rel="stylesheet" href="css/index.css">
         <!--  -->
-        <script src="https://pardnchiu.github.io/PDExtension-js/PDExtension.min.js" copyright="Pardn Ltd"></script>
-        <script src="https://pardnchiu.github.io/markdown-editor/js/PDMDEditor.min.js" copyright="Pardn Ltd"></script>
+        <script src="https://cdn.jsdelivr.net/gh/pardnchiu/PDExtension-js@latest/js/PDExtension.min.js" copyright="Pardn Ltd" defer></script>
+        <!-- <script src="https://pardnchiu.github.io/markdown-editor/js/PDMDEditor.min.js" copyright="Pardn Ltd"></script> -->
         <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
         <script src="./js/index.min.js" defer></script>
         <!--  -->
@@ -295,43 +295,45 @@
         </section>
         <footer :path="./view/footer.html"></footer>
         <script>
-            const body = new $dom({
-                id: "body",
-                data: {
-                    title: "Pardn Ltd",
-                    items: [
-                        { href: "./index.html", name: "HOME" },
-                        { href: "./portfolio.html", name: "PORTFOLIO" },
-                        { href: "./blog.html", name: "BLOG" },
-                    ],
-                    copyright: "© 帕登數位科技有限公司 Pardn Ltd",
-                    footer: [
-                        {
-                            href: "https://github.com/pardnchiu",
-                            class: "fa-brands fa-github"
-                        },
-                        {
-                            href: "https://linkedin.com/pardnchiu",
-                            class: "fa-brands fa-linkedin-in"
-                        },
-                        {
-                            href: "mailto:mail@pardn.ltd",
-                            class: "fa-regular fa-envelope"
+            document.addEventListener("DOMContentLoaded", _ => {
+                const body = new $dom({
+                    id: "body",
+                    data: {
+                        title: "Pardn Ltd",
+                        items: [
+                            { href: "./index.html", name: "HOME" },
+                            { href: "./portfolio.html", name: "PORTFOLIO" },
+                            { href: "./blog.html", name: "BLOG" },
+                        ],
+                        copyright: "© 帕登數位科技有限公司 Pardn Ltd",
+                        footer: [
+                            {
+                                href: "https://github.com/pardnchiu",
+                                class: "fa-brands fa-github"
+                            },
+                            {
+                                href: "https://linkedin.com/pardnchiu",
+                                class: "fa-brands fa-linkedin-in"
+                            },
+                            {
+                                href: "mailto:mail@pardn.ltd",
+                                class: "fa-regular fa-envelope"
+                            }
+                        ]
+                    },
+                    event: {
+                        tab: function () {
+                            this.$pre().$$class("show") ? this.$pre().class_("show") : this.$pre()._class("show")
                         }
-                    ]
-                },
-                event: {
-                    tab: function () {
-                        this.$pre().$$class("show") ? this.$pre().class_("show") : this.$pre()._class("show")
+                    },
+                    next: function () {
+                        const br = "blog".$.$sel("section.br");
+                        if (br) {
+                            const top = vh - br.$h;
+                            br._style({ top: `${(br.$h + 64 > vh) ? top : 0}px` })
+                        };
                     }
-                },
-                next: function () {
-                    const br = "blog".$.$sel("section.br");
-                    if (br) {
-                        const top = vh - br.$h;
-                        br._style({ top: `${(br.$h + 64 > vh) ? top : 0}px` })
-                    };
-                }
+                })
             })
         </script>
     </body>
