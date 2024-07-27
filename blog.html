@@ -52,7 +52,7 @@
         <!--  -->
         <link rel="stylesheet" href="css/index.css">
         <!--  -->
-        <script src="https://cdn.jsdelivr.net/gh/pardnchiu/PDExtension-js@latest/js/PDExtension.min.js" copyright="Pardn Ltd" defer></script>
+        <script src="https://cdn.jsdelivr.net/gh/pardnchiu/PDRenderKit@1.0.1/dist/PDRenderKit.js" copyright="Pardn Ltd" defer></script>
         <!-- <script src="https://pardnchiu.github.io/markdown-editor/js/PDMDEditor.min.js" copyright="Pardn Ltd"></script> -->
         <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
         <script src="./js/index.min.js" defer></script>
@@ -296,7 +296,7 @@
         <footer :path="./view/footer.html"></footer>
         <script>
             document.addEventListener("DOMContentLoaded", _ => {
-                const body = new $dom({
+                const body = new PD({
                     id: "body",
                     data: {
                         title: "Pardn Ltd",

@@ -52,7 +52,7 @@
         <!--  -->
         <link rel="stylesheet" href="css/index.css">
         <!--  -->
-        <script src="https://cdn.jsdelivr.net/gh/pardnchiu/PDExtension-js@latest/js/PDExtension.min.js" copyright="Pardn Ltd" defer></script>
+        <script src="https://cdn.jsdelivr.net/gh/pardnchiu/PDRenderKit@1.0.1/dist/PDRenderKit.js" copyright="Pardn Ltd" defer></script>
         <!-- <script src="https://pardnchiu.github.io/PDExtension-js/PDExtension.min.js" copyright="Pardn Ltd"></script> -->
         <!-- <script src="https://pardnchiu.github.io/markdown-editor/js/PDMDEditor.min.js" copyright="Pardn Ltd"></script> -->
         <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
@@ -83,9 +83,9 @@
         <section :path="./view/blog-content.html"></section>
         <footer :path="./view/footer.html"></footer>
         <script type="module">
-            import { MDViewer, MDEditor } from "https://cdn.jsdelivr.net/gh/pardnchiu/markdown-editor@1.0.1/v1/PDMDEditor.min.js"
+            import { viewer as MDViewer, editor as MDEditor } from "https://cdn.jsdelivr.net/gh/pardnchiu/PDMarkdownKit@1.0.0/dist/PDMarkdownKit.js"
             document.addEventListener("DOMContentLoaded", _ => {
-                const body = new $dom({
+                const body = new PD({
                     id: "body",
                     data: {
                         title: "Pardn Ltd",
@@ -127,7 +127,7 @@
                             editor: new MDEditor({
                                 id: ""
                             }),
-                pre: `> A web-based Markdown editor with real-time preview designed for editing of md files online. 
+                            pre: `> A web-based Markdown editor with real-time preview designed for editing of md files online. 
 > Through modular design, it is easy to integrate into websites for use.
 > Must be used in conjunction with [PDExtension-js](https://github.com/pardnchiu/PDExtension-js).
 
@@ -149,9 +149,9 @@ This source code project is licensed under the GPL-3.0 license.
 ***
 
 ©️ 2023 [Pardn Chiu 邱敬幃](https://www.linkedin.com/in/pardnchiu)`, delay: 0
-            });
-            "blog".$.$child([0, 0])._child(viewer.body, "section.page".$);
-            viewer.init();
+                        });
+                        "blog".$.$child([0, 0])._child(viewer.body, "section.page".$);
+                        viewer.init();
                     }
                 })
             })
